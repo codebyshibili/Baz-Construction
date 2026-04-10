@@ -15413,3 +15413,113 @@ input[type=radio] {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+
+
+.arabic-page {
+  font-family: 'Alexandria', sans-serif;
+}
+html[lang="ar"] {
+  font-family: 'Alexandria', sans-serif;
+}
+
+html[lang="ar"] body {
+  font-family: 'Alexandria', sans-serif !important;
+}
+h1, h2, h3, h4, h5, p, a, button , span {
+  font-family: 'Alexandria', sans-serif;
+}
+
+/* existing switch styles stay same */
+
+/* FIXED POSITION */
+.fixed-switch {
+  position: fixed;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  z-index: 9999;
+}
+
+/* Optional: little shadow for floating effect */
+.lang-switch {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.fixed-switch:hover {
+  transform: translateY(-50%) scale(1.05);
+}
+
+.lang-switch {
+  backdrop-filter: blur(6px);
+  background: rgba(255,255,255,0.6);
+} 
+/* Floating position */
+.lang-modern {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 9999;
+
+  width: 78px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+
+  /* Glassmorphism */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+
+  /* Shadow */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+
+  color: #0d6efd;
+  overflow: hidden;
+}
+
+/* Text */
+.lang-modern .text {
+  z-index: 2;
+  transition: 0.3s;
+}
+
+/* Sliding thumb */
+.lang-modern .thumb {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #0d6efd, #4dabf7);
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: 0.35s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+/* Hover animation */
+.lang-modern:hover .thumb {
+  left: 44px;
+}
+
+/* ACTIVE (Arabic page) */
+.lang-modern.active .thumb {
+  left: 44px;
+}
+
+/* Text color switch */
+.lang-modern.active .ar {
+  color: #fff;
+}
+
+.lang-modern .en {
+  color: #0d6efd;
+}
