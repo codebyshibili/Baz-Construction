@@ -779,10 +779,23 @@
    <script src="assets/js/slider.js"></script>
    <script src="assets/js/wow.js"></script>
    <script src="assets/js/main.js"></script>
+    <script>
+function convertToArabicNumbers(text) {
+  return text.replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
+}
+
+function applyArabicNumbers() {
+  document.querySelectorAll("body *").forEach(el => {
+    if (el.children.length === 0) { // only text elements
+      el.innerHTML = convertToArabicNumbers(el.innerHTML);
+    }
+  });
+}
+
+applyArabicNumbers();
+</script>
 
 
 </body>
 
-
-<!-- Mirrored from ordainit.com/html/rooft/rooft-rtl/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Mar 2026 07:05:19 GMT -->
 </html>

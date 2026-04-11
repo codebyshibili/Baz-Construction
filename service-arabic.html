@@ -79,19 +79,19 @@
             </a>
          </div>
          <div class="itoffcanvas__text">
-            <p>Suspendisse interdum consectetur libero id. Fermentum leo vel orci porta non. Euismod viverra nibh
-               cras pulvinar suspen.</p>
+            <!-- <p>Suspendisse interdum consectetur libero id. Fermentum leo vel orci porta non. Euismod viverra nibh
+               cras pulvinar suspen.</p> -->
          </div>
          <div class="it-menu-mobile d-xl-none"></div>
          <div class="itoffcanvas__info">
-            <h3 class="offcanva-title">Get In Touch</h3>
+            <h3 class="offcanva-title">تواصل معنا</h3>
             <div class="it-info-wrapper mb-20 d-flex align-items-center">
                <div class="itoffcanvas__info-icon">
                   <a href="#"><i class="fal fa-envelope"></i></a>
                </div>
                <div class="itoffcanvas__info-address">
-                  <span>Email</span>
-                  <a href="maito:hello@yourmail.com">hello@yourmail.com</a>
+                  <span>البريد الإلكتروني</span>
+                  <a href="maito:drob.khalid@gmail.com">drob.khalid@gmail.com</a>
                </div>
             </div>
             <div class="it-info-wrapper mb-20 d-flex align-items-center">
@@ -99,8 +99,8 @@
                   <a href="#"><i class="fal fa-phone-alt"></i></a>
                </div>
                <div class="itoffcanvas__info-address">
-                  <span>Phone</span>
-                  <a href="tel:(00)45611227890">(00) 456 1122 7890</a>
+                  <span>هاتف</span>
+                  <a href="tel:0555551456">0555551456</a>
                </div>
             </div>
             <div class="it-info-wrapper mb-20 d-flex align-items-center">
@@ -108,9 +108,8 @@
                   <a href="#"><i class="fas fa-map-marker-alt"></i></a>
                </div>
                <div class="itoffcanvas__info-address">
-                  <span>Location</span>
-                  <a href="htits://www.google.com/maps/@37.4801311,22.8928877,3z" target="_blank">Riverside 255,
-                     San Francisco, USA </a>
+                  <span>الموقع</span>
+                  <a href="#0" target="_blank">طريق هارون الرشيد، السلي، مخرج 18، الرياض، المملكة العربية السعودية</a>
                </div>
             </div>
          </div>
@@ -986,10 +985,23 @@
    <script src="assets/js/slider.js"></script>
    <script src="assets/js/wow.js"></script>
    <script src="assets/js/main.js"></script>
+    <script>
+function convertToArabicNumbers(text) {
+  return text.replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
+}
+
+function applyArabicNumbers() {
+  document.querySelectorAll("body *").forEach(el => {
+    if (el.children.length === 0) { // only text elements
+      el.innerHTML = convertToArabicNumbers(el.innerHTML);
+    }
+  });
+}
+
+applyArabicNumbers();
+</script>
 
 
 </body>
 
-
-<!-- Mirrored from ordainit.com/html/rooft/rooft-rtl/service.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Mar 2026 07:04:42 GMT -->
 </html>
